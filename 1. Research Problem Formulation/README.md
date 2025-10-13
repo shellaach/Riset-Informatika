@@ -1,4 +1,5 @@
-BAB I - PENDAHULUAN
+BAB I
+PENDAHULUAN
 
 1.1 Latar Belakang
 Pendidikan tinggi merupakan salah satu faktor penting dalam membentuk sumber daya manusia yang berkualitas. Salah satu indikator keberhasilan institusi pendidikan adalah tingkat kelulusan mahasiswa tepat waktu. Namun, banyak faktor yang memengaruhi kelulusan mahasiswa, seperti nilai akademik, tingkat kehadiran, dan aktivitas akademik di luar perkuliahan.
