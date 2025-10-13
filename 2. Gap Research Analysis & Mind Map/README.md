@@ -2,22 +2,28 @@ BAB II
 TINJAUAN PUSTAKA DAN KERANGKA PEMIKIRAN
 
 2.1 Landasan Teori
+
 2.1.1 Machine Learning
+
 Machine Learning (ML) merupakan salah satu cabang dari kecerdasan buatan (Artificial Intelligence/AI) yang memungkinkan komputer mempelajari pola dari data dan membuat prediksi tanpa harus diprogram secara langsung. (Laila dkk., 2025).
 Dalam bidang pendidikan, machine learning dapat dimanfaatkan untuk menganalisis data akademik mahasiswa, menemukan pola, dan memprediksi kemungkinan yang akan terjadi guna mendukung pengambilan keputusan.
 
 2.1.2 Educational Data Mining (EDM)
+
 Educational Data Mining (EDM) merupakan proses penambangan data pendidikan untuk mendapatkan informasi tersirat dan mengekstrak informasi penting pada data pendidikan yang berguna bagi pengembangan pembelajaran. (Selly & Arman, 2022).
 Melalui penerapan EDM, perguruan tinggi dapat mengetahui lebih awal mahasiswa yang berpotensi mengalami kendala akademik, sehingga bisa segera diberikan pendampingan atau bimbingan lebih awal.
 
 2.1.3 Logistic Regression
+
 Regresi logistik biner merupakan metode statistika sekaligus algoritma klasifikasi yang digunakan untuk memodelkan hubungan antara variabel dependen (Y) yang bersifat biner atau dikotomus (seperti lulus atau tidak lulus), dengan satu atau lebih variabel independen (X) yang dapat berupa data kualitatif, kuantitatif, atau kombinasi keduanya (Azis dkk., 2022). Model ini menghitung probabilitas suatu kejadian berdasarkan fungsi logit. Kelebihan regresi logistik adalah mudah diinterpretasi serta mampu menunjukkan seberapa besar pengaruh masing-masing variabel terhadap hasil akhir
 
 2.1.4 Random Forest
+
 Random Forest merupakan algoritma berbasis ensemble learning yang menggabungkan sejumlah Decision Tree untuk meningkatkan akurasi prediksi (Harkamsyah, 2025). Setiap pohon dalam Random Forest dibangun dari sampel acak data dan fitur, kemudian hasil akhirnya diperoleh melalui mekanisme voting.
 Kelebihan Random Forest antara lain mampu menangani data non-linear, tahan terhadap overfitting, serta dapat memberikan informasi mengenai feature importance yang menunjukkan variabel paling berpengaruh.
 
 2.1.5 Faktor yang Mempengaruhi Kelulusan Mahasiswa
+
 Menurut beberapa penelitian, faktor yang memengaruhi kelulusan mahasiswa meliputi:
 
 1. Nilai Akademik: mencerminkan kemampuan dan pencapaian belajar.
@@ -26,6 +32,7 @@ Menurut beberapa penelitian, faktor yang memengaruhi kelulusan mahasiswa meliput
    Meskipun terdapat berbagai faktor lain seperti motivasi, stres akademik, dukungan sosial, dan latar belakang ekonomi yang juga berpengaruh terhadap kelulusan mahasiswa, penelitian ini berfokus pada faktor-faktor yang dapat diukur secara objektif melalui data akademik, yaitu nilai, kehadiran, dan aktivitas akademik mahasiswa.
 
 2.2 Penelitian Terdahulu
+
 Beberapa penelitian sebelumnya telah dilakukan untuk memprediksi kelulusan mahasiswa dengan berbagai algoritma machine learning. Penelitian-penelitian tersebut menjadi dasar dan pembanding dalam penelitian ini, khususnya terkait penggunaan algoritma klasifikasi seperti Decision Tree, Random Forest, dan Logistic Regression.
 
 Penelitian oleh Reyto Yogastiana (2025) berjudul “Prediksi Kelulusan Mahasiswa Menggunakan Algoritma Decision Tree C4.5” membangun model prediksi kelulusan menggunakan data simulatif sebanyak 200 mahasiswa dengan variabel IPK, jumlah SKS, kehadiran, dan lama studi. Hasil penelitian menunjukkan bahwa algoritma Decision Tree C4.5 mampu menghasilkan akurasi sebesar 85%, dengan IPK sebagai faktor yang paling berpengaruh terhadap kelulusan. Penelitian ini menunjukkan bahwa Decision Tree mudah dipahami dan efektif untuk data akademik, meskipun masih terbatas pada data buatan dan belum dibandingkan dengan algoritma lain.
@@ -44,6 +51,7 @@ Selain itu, beberapa penelitian sebelumnya juga belum melibatkan variabel aktivi
 Hal ini menjadi dasar dan celah penelitian (research gap) yang akan dikaji dalam penelitian ini, yaitu dengan membandingkan secara langsung algoritma Logistic Regression dan Random Forest dalam memprediksi kelulusan mahasiswa berdasarkan nilai akademik, tingkat kehadiran, dan aktivitas akademik. Melalui perbandingan ini, diharapkan dapat diketahui model mana yang memiliki kinerja paling optimal dalam konteks data pendidikan, serta memberikan rekomendasi yang dapat membantu pihak kampus dalam pengambilan keputusan akademik dan pembimbingan mahasiswa secara lebih dini.
 
 2.3 Kerangka Pemikiran (Model Penelitian)
+
 Penelitian ini berangkat dari asumsi bahwa nilai akademik (X1), tingkat kehadiran (X2), dan aktivitas akademik (X3) memengaruhi kelulusan mahasiswa (Y). Model prediksi akan dibuat menggunakan dua algoritma, yaitu Logistic Regression dan Random Forest, untuk melihat perbandingan kinerjanya.
 
 Hubungan antar variabel dapat digambarkan sebagai berikut:
