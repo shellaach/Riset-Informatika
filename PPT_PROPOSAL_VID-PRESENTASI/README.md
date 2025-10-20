@@ -2,7 +2,7 @@
 
 ## Judul Penelitain
 
-membandingkan kinerja algoritma Logistic Regression dan Random Forest dalam memprediksi kelulusan mahasiswa berdasarkan nilai, kehadiran, dan aktivitas akademik.
+PERBANDINGAN KINERJA ALGORITMA LOGISTIC REGRESSION DAN RANDOM FOREST DALAM MEMPREDIKSI KELULUSAN MAHASISWA BERDASARKAN NILAI, KEHADIRAN, DAN AKTIVITAS AKADEMIK.
 
 ---
 
