@@ -25,9 +25,11 @@ File proposal:
 File PPT UTS:  
 [PPT](https://drive.google.com/file/d/1OitI4q4zUlLFE2Dwqg1awMx7TSrPpt2l/view?usp=drive_link)
 
+---
+
 ## Dosen Pengampu
 
-Nama Dosen Pengampu: [Dr. Basuki Rahmat, S.Si. MT]
+Nama Dosen Pengampu: Dr. Basuki Rahmat, S.Si. MT
 
 ## Kelas
 
