@@ -2,11 +2,14 @@ BAB III
 METODOLOGI PENELITIAN
 
 3.1 Jenis dan Pendekatan Penelitian
+
 Penelitian ini menggunakan pendekatan kuantitatif dengan metode eksperimen komparatif (comparative experimental method).
 Tujuan pendekatan ini adalah untuk membandingkan hasil dua algoritma machine learning, Logistic Regression dan Random Forest dalam melakukan prediksi kelulusan mahasiswa berdasarkan data yang telah dikumpulkan.
 Data yang digunakan berupa data numerik (nilai, kehadiran, dan aktivitas akademik), yang kemudian diolah dan dianalisis menggunakan perangkat lunak berbasis Python untuk membangun serta mengevaluasi model prediksi.
 
+
 3.2 Populasi dan Sampel Penelitian
+
 3.2.1 Populasi
 Populasi dalam penelitian ini adalah seluruh mahasiswa pada program studi Informatika di Universitas Pembangunan Nasional “Veteran” Jawa Timur.
 
@@ -14,7 +17,9 @@ Populasi dalam penelitian ini adalah seluruh mahasiswa pada program studi Inform
 Sampel penelitian diambil dari sebagian data mahasiswa yang memiliki informasi lengkap mengenai nilai, kehadiran, serta aktivitas akademik. Jumlah sampel minimal 200 data mahasiswa agar hasil model dapat digeneralisasi dengan baik.
 Teknik pengambilan sampel yang digunakan adalah purposive sampling, yaitu pemilihan data berdasarkan kelengkapan atribut dan kesesuaian dengan tujuan penelitian.
 
+
 3.3 Variabel Penelitian dan Definisi Operasional
+
 3.3.1 Variabel Dependen (Y)
 • Status Kelulusan Mahasiswa
 Variabel ini menunjukkan apakah mahasiswa lulus tepat waktu atau tidak.
@@ -30,6 +35,7 @@ o 0 = Tidak Lulus
    Semua variabel ini akan digunakan sebagai input untuk model prediksi Logistic Regression dan Random Forest.
 
 3.4 Teknik Pengumpulan Data
+
 Data yang digunakan terdiri dari:
 
 1. Data sekunder — diperoleh dari sistem akademik kampus yang berisi nilai dan kehadiran mahasiswa.
@@ -40,6 +46,7 @@ Data yang digunakan terdiri dari:
    1 80 75 85 90 8 1
    2 60 55 58 65 5 0
    3 78 80 79 88 7 1
+
 
 3.5 Teknik Analisis Data
 Langkah-langkah analisis data dalam penelitian ini dijelaskan sebagai berikut:
@@ -74,7 +81,9 @@ Langkah-langkah analisis data dalam penelitian ini dijelaskan sebagai berikut:
    • Fitur (variabel) yang paling berpengaruh terhadap kelulusan mahasiswa.
    Interpretasi dilakukan berdasarkan feature importance pada Random Forest dan nilai koefisien pada Logistic Regression.
 
+
 3.6 Alat dan Bahan Penelitian
+
 Alat yang digunakan dalam penelitian ini meliputi:
 • Perangkat Lunak: Python 3.10, Google Colab / Jupyter Notebook
 • Library Python: pandas, numpy, scikit-learn, matplotlib, seaborn
