@@ -9,7 +9,7 @@ PERBANDINGAN KINERJA ALGORITMA LOGISTIC REGRESSION DAN RANDOM FOREST DALAM MEMPR
 ## Video Presentasi
 
 Video Presentsai:
-[Google Drive](https://drive.google.com/file/d/1seSzT6BBLqXdeYkMlpLx_RKL2HfQJQZQ/view?usp=sharing)
+[Video Presentasi](https://drive.google.com/file/d/1seSzT6BBLqXdeYkMlpLx_RKL2HfQJQZQ/view?usp=sharing)
 
 ---
 
