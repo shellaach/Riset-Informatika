@@ -1,4 +1,4 @@
-# UTS Riset
+# EAS Riset
 
 ## Judul Penelitain
 
