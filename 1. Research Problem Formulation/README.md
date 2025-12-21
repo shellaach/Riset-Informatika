@@ -4,40 +4,44 @@
 
 ### 1.1 Latar Belakang
 
-Pendidikan tinggi merupakan salah satu faktor penting dalam membentuk sumber daya manusia yang berkualitas. Salah satu indikator keberhasilan institusi pendidikan adalah tingkat kelulusan mahasiswa tepat waktu. Namun, banyak faktor yang memengaruhi kelulusan mahasiswa, seperti nilai akademik, tingkat kehadiran, dan aktivitas akademik di luar perkuliahan.
+Sistem penulisan bahasa Jepang merupakan salah satu sistem tulisan yang kompleks karena terdiri dari tiga jenis karakter utama, yaitu hiragana, katakana, dan kanji. Katakana memiliki peran penting dalam bahasa Jepang modern karena digunakan untuk menuliskan kata serapan, istilah asing, nama produk, serta istilah ilmiah. Meskipun jumlah karakter katakana relatif lebih sedikit dibandingkan kanji, banyak karakter katakana memiliki kemiripan bentuk visual, seperti ク dengan ケ atau ソ dengan ン, sehingga menyulitkan proses pengenalan, khususnya pada tulisan tangan.
 
-Perkembangan teknologi informasi memungkinkan proses analisis data dilakukan secara lebih cepat dan akurat menggunakan pendekatan _machine learning_. Dengan memanfaatkan data historis mahasiswa, model prediksi dapat dibangun untuk memperkirakan kemungkinan seorang mahasiswa lulus tepat waktu. Hal ini membantu pihak kampus dalam mendeteksi mahasiswa yang berisiko tidak lulus dan memberikan bimbingan lebih dini.
+Permasalahan pengenalan tulisan tangan semakin kompleks karena adanya variasi gaya penulisan antar individu. Setiap penulis dapat memiliki perbedaan ketebalan garis, kemiringan tulisan, serta penyederhanaan bentuk karakter. Variasi ini menjadi tantangan utama dalam pengembangan sistem pengenalan karakter otomatis, karena sistem harus mampu mengenali pola karakter yang tidak selalu konsisten secara visual.
 
-Dalam penelitian ini, penulis membandingkan dua algoritma klasifikasi populer yaitu _Logistic Regression_ dan _Random Forest_. _Logistic Regression_ memiliki kelebihan dalam hal interpretasi hasil dan kemudahan analisis statistik, sedangkan _Random Forest_ dikenal lebih unggul dalam akurasi pada data yang kompleks. Melalui perbandingan ini, diharapkan dapat diketahui model mana yang memberikan hasil terbaik dalam memprediksi kelulusan mahasiswa berdasarkan nilai akademik, kehadiran, dan aktivitas akademik.
+Penelitian terkait pengenalan karakter Jepang dengan pendekatan kecerdasan buatan telah banyak dilakukan, terutama untuk karakter hiragana dan kanji. Beberapa penelitian menunjukkan bahwa metode Convolutional Neural Network (CNN) mampu memberikan performa yang baik dalam pengenalan tulisan tangan. Namun, penelitian yang secara khusus membahas pengenalan tulisan tangan katakana masih relatif terbatas dan sebagian besar masih menggunakan arsitektur CNN sederhana seperti LeNet.
+Dalam beberapa tahun terakhir, arsitektur CNN yang lebih dalam seperti Residual Network (ResNet) menunjukkan kinerja yang unggul dalam berbagai tugas pengenalan citra. ResNet memperkenalkan konsep residual connection yang memungkinkan pelatihan jaringan yang lebih dalam tanpa mengalami degradasi performa. ResNet-18 sebagai salah satu varian ResNet yang ringan dan efisien telah terbukti efektif dalam berbagai tugas pengenalan citra dan tulisan tangan. Oleh karena itu, penelitian ini mengusulkan penggunaan arsitektur ResNet-18 untuk pengenalan tulisan tangan karakter katakana guna memperoleh performa pengenalan yang lebih baik dan stabil.
+
 
 ### 1.2 Rumusan Masalah
 
-1. Bagaimana penerapan algoritma _Logistic Regression_ dan _Random Forest_ dalam memprediksi kelulusan mahasiswa?
-2. Bagaimana kinerja kedua algoritma tersebut berdasarkan metrik evaluasi seperti akurasi, presisi, _recall_, dan _F1-score_?
-3. Algoritma mana yang memiliki kinerja lebih baik untuk kasus prediksi kelulusan mahasiswa?
+1. Bagaimana penerapan arsitektur Convolutional Neural Network (CNN) ResNet-18 dalam melakukan klasifikasi aksara Jepang jenis katakana berbasis citra tulisan tangan?
+2. Seberapa efektif model ResNet-18 dalam mengenali karakter katakana berdasarkan hasil evaluasi performa menggunakan metrik akurasi, presisi, recall, dan F1-score?
+3. Bagaimana pengaruh pembagian data (data splitting) terhadap tingkat akurasi pengenalan aksara katakana menggunakan model ResNet-18?
+
 
 ### 1.3 Tujuan Penelitian
 
 Tujuan dari penelitian ini adalah:
 
-1. Menerapkan algoritma _Logistic Regression_ dan _Random Forest_ dalam memprediksi kelulusan mahasiswa.
-2. Membandingkan kinerja kedua algoritma berdasarkan hasil evaluasi model.
-3. Mengidentifikasi faktor yang paling berpengaruh terhadap kelulusan mahasiswa berdasarkan hasil analisis fitur.
+1. Mengimplementasikan arsitektur CNN ResNet-18 untuk klasifikasi aksara Jepang jenis katakana berbasis citra tulisan tangan.
+2. Mengevaluasi dan menganalisis performa model ResNet-18 dalam mengenali karakter katakana menggunakan matrik evaluasi klasifikasi.
+3. Menganalisis pengaruh pembagian data terhadap akurasi pengenalan aksara katakana pada model ResNet-18.
+
 
 ### 1.4 Manfaat Penelitian
 
-**a. Manfaat Teoritis**  
-Penelitian ini diharapkan dapat menjadi referensi akademik dalam penerapan algoritma _machine learning_ untuk prediksi kelulusan mahasiswa, serta memberikan kontribusi terhadap penelitian di bidang _Educational Data Mining (EDM)_.
+1. Memberikan kontribusi akademik dalam pengembangan penelitian pengenalan tulisan tangan karakter katakana berbasis deep learning.
+2. Menjadi referensi bagi penelitian selanjutnya yang berkaitan dengan pengenalan karakter bahasa Jepang.
+3. Menjadi dasar pengembangan sistem pengenalan tulisan tangan bahasa Jepang yang lebih akurat dan efisien.
 
-**b. Manfaat Praktis**  
-Hasil penelitian ini dapat membantu pihak fakultas atau program studi dalam melakukan pemantauan akademik serta memberikan intervensi dini kepada mahasiswa yang berisiko tidak lulus tepat waktu.
 
 ### 1.5 Batasan Masalah
 
-Agar penelitian ini lebih terarah dan mudah dilakukan, penulis memberikan beberapa batasan sebagai berikut:
+Agar penelitian ini lebih terarah dan mudah dilakukan, penulis memberikan beberapa  batasan sebagai berikut: 
 
-1. Penelitian ini hanya membahas tiga faktor utama yang dianggap berpengaruh terhadap kelulusan mahasiswa, yaitu nilai akademik, tingkat kehadiran, dan aktivitas akademik.
-2. Data yang digunakan berasal dari data akademik mahasiswa Program Studi Informatika UPN “Veteran” Jawa Timur, atau menggunakan data simulasi yang dibuat menyerupai kondisi sebenarnya.
-3. Algoritma yang dibandingkan dalam penelitian ini hanya dua, yaitu _Logistic Regression_ dan _Random Forest_.
-4. Penelitian ini tidak membahas faktor non-akademik seperti motivasi, kondisi ekonomi, atau lingkungan sosial mahasiswa.
-5. Proses pengujian model dilakukan dengan pembagian data latih dan data uji sebesar 80:20, sehingga hasil akurasi hanya menggambarkan performa model pada data yang digunakan.
+1. Penelitian ini hanya membahas pengenalan dan klasifikasi aksara Jepang jenis katakana, tidak mencakup hiragana, kanji, maupun kombinasi aksara Jepang lainnya.
+2. Dataset yang digunakan dalam penelitian ini adalah ETL Character Database tipe ETL-5, dengan fokus pada karakter katakana dasar yang berjumlah 46 kelas.
+3. Citra yang digunakan berupa citra tulisan tangan (handwritten) dalam format digital, bukan citra cetak atau citra hasil pemindaian dokumen kompleks.
+4. Metode yang digunakan dalam penelitian ini dibatasi pada arsitektur Convolutional Neural Network (CNN) ResNet-18 sebagai model utama untuk klasifikasi karakter.
+5. Proses preprocessing data dibatasi pada resize citra, konversi format (grayscale ke RGB), normalisasi, serta augmentasi data sederhana tanpa melakukan ekstraksi fitur manual.
+
