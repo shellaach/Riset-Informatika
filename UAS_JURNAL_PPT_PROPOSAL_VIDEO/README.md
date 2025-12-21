@@ -9,7 +9,7 @@ Implementasi Arsitektur Convolutional Neural Network ResNet-18 dalam Klasifikasi
 ## Jurnal
 
 Jurnal:
-[Video Presentasi](https://drive.google.com/drive/folders/1ruZ3MPb0kxiMW0H46u_m8dt6TRfHRuOM?usp=sharing)
+[Jurnal](https://drive.google.com/drive/folders/1ruZ3MPb0kxiMW0H46u_m8dt6TRfHRuOM?usp=sharing)
 
 ---
 
