@@ -2,80 +2,41 @@
 
 ## TINJAUAN PUSTAKA DAN KERANGKA PEMIKIRAN
 
-### 2.1 Landasan Teori
+### 2.1 Karakter Katakana
 
-#### 2.1.1 Machine Learning
+Katakana merupakan salah satu sistem penulisan dalam bahasa Jepang yang digunakan untuk menuliskan kata serapan dari bahasa asing, nama ilmiah, nama produk, dan penekanan kata tertentu. Katakana dasar terdiri dari 46 karakter utama, yang masing-masing memiliki pola guratan khas. Namun, banyak karakter katakana memiliki bentuk visual yang mirip sehingga sulit dibedakan, terutama pada tulisan tangan.
 
-_Machine Learning (ML)_ merupakan cabang dari kecerdasan buatan (_Artificial Intelligence/AI_) yang memungkinkan komputer mempelajari pola dari data dan membuat prediksi tanpa harus diprogram secara eksplisit (Laila dkk., 2025).  
-Dalam bidang pendidikan, _machine learning_ dimanfaatkan untuk menganalisis data akademik mahasiswa, menemukan pola, dan memprediksi kemungkinan yang akan terjadi guna mendukung pengambilan keputusan.
 
-#### 2.1.2 Educational Data Mining (EDM)
+#### 2.2 Handwritten Character Recognition
 
-_Educational Data Mining (EDM)_ merupakan proses penambangan data pendidikan untuk mendapatkan informasi penting dari data akademik yang berguna bagi pengembangan pembelajaran (Selly & Arman, 2022).  
-Melalui EDM, perguruan tinggi dapat mengidentifikasi mahasiswa yang berpotensi mengalami kendala akademik dan memberikan bimbingan lebih awal.
+Handwritten Character Recognition (HCR) merupakan bidang dalam pengolahan citra dan kecerdasan buatan yang bertujuan untuk mengenali dan mengklasifikasikan karakter tulisan tangan dari citra digital. Tantangan utama HCR adalah adanya variasi gaya tulisan, perbedaan ketebalan garis, serta kemiripan bentuk antar karakter. 
 
-#### 2.1.3 Logistic Regression
+Pada aksara Jepang, khususnya katakana, banyak karakter memiliki bentuk visual yang hampir serupa sehingga mempersulit proses pengenalan. Oleh karena itu, diperlukan metode yang mampu mengekstraksi fitur secara efektif dan diskriminatif. Pendekatan deep learning berbasis Convolutional Neural Network (CNN) banyak digunakan dalam HCR karena kemampuannya dalam mengekstraksi fitur secara otomatis, sehingga menjadi dasar dalam penelitian ini.
 
-Regresi logistik biner merupakan metode statistika sekaligus algoritma klasifikasi yang digunakan untuk memodelkan hubungan antara variabel dependen (Y) yang bersifat biner, seperti lulus atau tidak lulus, dengan satu atau lebih variabel independen (X) (Azis dkk., 2022).  
-Model ini menghitung probabilitas suatu kejadian berdasarkan fungsi logit. Kelebihan regresi logistik adalah mudah diinterpretasi serta mampu menunjukkan seberapa besar pengaruh masing-masing variabel terhadap hasil akhir.
 
-#### 2.1.4 Random Forest
+#### 2.3 Convolutional Neural Network (CNN)
 
-_Random Forest_ merupakan algoritma berbasis _ensemble learning_ yang menggabungkan sejumlah _Decision Tree_ untuk meningkatkan akurasi prediksi (Harkamsyah, 2025).  
-Setiap pohon dalam _Random Forest_ dibangun dari sampel acak data dan fitur, kemudian hasil akhirnya diperoleh melalui mekanisme voting.  
-Kelebihan _Random Forest_ antara lain mampu menangani data non-linear, tahan terhadap _overfitting_, serta memberikan informasi mengenai _feature importance_ yang menunjukkan variabel paling berpengaruh.
+Convolutional Neural Network (CNN) adalah salah satu jenis jaringan saraf tiruan yang dirancang khusus untuk memproses data berbentuk citra. CNN terdiri dari beberapa lapisan utama, yaitu convolution layer, pooling layer, dan fully connected layer. CNN mampu mengekstraksi fitur secara otomatis dari citra tanpa memerlukan proses ekstraksi fitur manual.
 
-#### 2.1.5 Faktor yang Mempengaruhi Kelulusan Mahasiswa
 
-Menurut beberapa penelitian, faktor yang memengaruhi kelulusan mahasiswa meliputi:
+#### 2.4 ResNet-18
 
-1. **Nilai Akademik:** mencerminkan kemampuan dan pencapaian belajar.
-2. **Kehadiran:** semakin tinggi kehadiran, semakin besar peluang lulus tepat waktu.
-3. **Aktivitas Akademik:** keterlibatan dalam organisasi, seminar, atau kegiatan ilmiah dapat meningkatkan motivasi dan kemampuan sosial.
+ResNet-18 merupakan salah satu varian Residual Network yang terdiri dari 18 layer. Keunggulan utama ResNet terletak pada penggunaan residual connection atau skip connection yang memungkinkan aliran informasi langsung dari layer sebelumnya ke layer berikutnya. Mekanisme ini membantu mengatasi masalah vanishing gradient dan memungkinkan pelatihan jaringan yang lebih dalam dengan performa yang stabil.
 
-Penelitian ini berfokus pada tiga faktor yang dapat diukur secara objektif melalui data akademik: nilai, kehadiran, dan aktivitas akademik mahasiswa.
+#### 2.5 Dataset ETL-5
 
-### 2.2 Penelitian Terdahulu
+Dataset ETL-5 merupakan bagian dari ETL Character Database yang dikembangkan oleh AIST Jepang. Dataset ini berisi citra tulisan tangan karakter Jepang dalam format grayscale dengan ukuran 72 × 76 piksel. Dataset ETL-5 banyak digunakan dalam penelitian pengenalan karakter Jepang karena kualitas dan konsistensi datanya.
 
-Beberapa penelitian sebelumnya telah dilakukan untuk memprediksi kelulusan mahasiswa dengan berbagai algoritma _machine learning_.  
-Penelitian-penelitian ini menjadi dasar dan pembanding dalam penelitian yang dilakukan.
+### 2.6 Penelitian Terdahulu
 
-**Reyto Yogastiana (2025)** – _Prediksi Kelulusan Mahasiswa Menggunakan Algoritma Decision Tree C4.5_  
-Menggunakan data simulatif sebanyak 200 mahasiswa dengan variabel IPK, jumlah SKS, kehadiran, dan lama studi.  
-Hasil menunjukkan akurasi **85%**, dengan IPK sebagai faktor paling berpengaruh.
+Beberapa penelitian terdahulu yang menjadi acuan dalam penelitian ini berasal dari jurnal-jurnal yang relevan dengan pengenalan karakter Jepang dan penerapan Convolutional Neural Network (CNN).
+Penelitian yang dilakukan oleh Rusyn et al. (2005) menggunakan arsitektur Preact ResNet-18 untuk pengenalan karakter kanji tulisan tangan dengan jumlah kelas yang besar. Hasil penelitian menunjukkan bahwa penggunaan ResNet-18 mampu meningkatkan akurasi pengenalan secara signifikan dibandingkan metode konvensional, serta mampu mengatasi permasalahan degradasi performa pada jaringan yang lebih dalam.
 
-**Reki Kurnia Permana dkk. (2025)** – _Prediksi Kelulusan Mahasiswa dengan Menggunakan Algoritma Decision Tree_  
-Menggunakan data nyata dari 161 mahasiswa Universitas Teknologi Digital Bandung.  
-Akurasi model mencapai **90%**, dengan IPS semester 2 dan 3 serta status pekerjaan sebagai faktor utama.
+Nugroho dan Harjoko (2021) mengembangkan sistem transliterasi karakter hiragana dan katakana tulisan tangan menggunakan pendekatan CNN-SVM. Penelitian ini menunjukkan bahwa CNN efektif sebagai ekstraktor fitur, namun penggunaan arsitektur yang relatif sederhana masih memiliki keterbatasan dalam membedakan karakter yang memiliki kemiripan bentuk.
+Winardi dan Hartati (2022) melakukan penelitian pengenalan aksara katakana menggunakan CNN dengan arsitektur LeNet. Hasil penelitian menunjukkan bahwa metode CNN mampu mengenali karakter katakana dengan cukup baik, namun performa masih terbatas pada kemampuan ekstraksi fitur arsitektur CNN yang dangkal.
 
-**Rafika Syahranita, Suhartono, dan Syahiduz Zaman (2023)** – _Prediksi Kategori Kelulusan Mahasiswa Menggunakan Metode Regresi Logistik Multinomial_  
-Menggunakan data 300 mahasiswa UIN Maulana Malik Ibrahim Malang untuk mengklasifikasikan mahasiswa menjadi tiga kategori: cepat, tepat waktu, dan lambat.  
-Akurasi model **85,5%**, _recall_ **93,9%**, dengan IP tiap semester menjadi faktor dominan.
+Fernandi et al. (2024) menerapkan CNN untuk mendeteksi huruf hiragana tulisan tangan menggunakan dataset standar karakter Jepang. Penelitian ini membuktikan bahwa CNN mampu menangkap pola guratan karakter secara efektif, sehingga mendukung penggunaan CNN yang lebih dalam seperti ResNet-18 untuk meningkatkan performa.
 
-**Harkamsyah Andrianof, Aggy Pramana Gusman, dan Okta Andrica Putra (2025)** – _Implementasi Algoritma Random Forest untuk Prediksi Kelulusan Mahasiswa Berdasarkan Data Akademik_  
-Menggunakan data dari beberapa program studi di Universitas Putra Indonesia YPTK Padang.  
-Akurasi **87,5%**, ROC-AUC **0,912**, dengan IPK dan kehadiran sebagai variabel paling berpengaruh.
+Penelitian oleh Solis et al. (2023) mengusulkan penggunaan ensemble CNN untuk pengenalan karakter Jepang tulisan tangan. Hasil penelitian menunjukkan peningkatan performa dibandingkan model tunggal, yang mengindikasikan bahwa kemampuan ekstraksi fitur CNN sangat berpengaruh terhadap akurasi pengenalan karakter.
 
-Dari keempat penelitian tersebut dapat disimpulkan bahwa algoritma seperti _Decision Tree_, _Logistic Regression_, dan _Random Forest_ telah terbukti efektif dengan akurasi di atas **80%**.  
-Namun, sebagian besar penelitian belum membandingkan secara langsung model linear (_Logistic Regression_) dengan model ensemble (_Random Forest_), serta belum mempertimbangkan aktivitas akademik sebagai variabel tambahan.  
-Hal ini menjadi dasar (_research gap_) penelitian ini.
-
-### 2.3 Kerangka Pemikiran (Model Penelitian)
-
-Penelitian ini berasumsi bahwa nilai akademik (X1), tingkat kehadiran (X2), dan aktivitas akademik (X3) berpengaruh terhadap kelulusan mahasiswa (Y).  
-Model prediksi dibuat menggunakan dua algoritma, yaitu _Logistic Regression_ dan _Random Forest_, untuk melihat perbandingan kinerjanya.
-
-**Hubungan antar variabel:**  
-Nilai Akademik (X1)  
-│  
-Kehadiran (X2) → Logistic Regression & Random Forest → Prediksi Kelulusan Mahasiswa (Y) (Tepat Waktu / Tidak Tepat Waktu)  
-│  
-Aktivitas Akademik (X3)
-
-Model ini menunjukkan bahwa ketiga variabel (X1, X2, X3) diolah menggunakan dua model _machine learning_ berbeda untuk menghasilkan prediksi kelulusan mahasiswa (Y).
-
-### 2.4 Hipotesis Penelitian
-
-1. **H1:** Algoritma _Random Forest_ memiliki tingkat akurasi lebih tinggi dibandingkan _Logistic Regression_ dalam memprediksi kelulusan mahasiswa.
-2. **H2:** Variabel IPK dan tingkat kehadiran berpengaruh signifikan terhadap hasil prediksi kelulusan mahasiswa.
-3. **H3:** Penambahan variabel aktivitas akademik dapat meningkatkan akurasi model prediksi kelulusan.
+Berdasarkan penelitian-penelitian tersebut, dapat disimpulkan bahwa CNN merupakan metode yang efektif untuk pengenalan karakter Jepang. Namun, penelitian yang secara khusus menerapkan arsitektur ResNet-18 pada pengenalan tulisan tangan karakter katakana masih relatif terbatas. Oleh karena itu, penelitian ini berfokus pada penerapan ResNet-18 untuk mengisi celah penelitian tersebut dan meningkatkan performa pengenalan karakter katakana
